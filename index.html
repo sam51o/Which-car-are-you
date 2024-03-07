@@ -1,0 +1,55 @@
+<!DOCTYPE html> <html><head>
+        <title>Which car are you?</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #17d3ff;
+    text-align: center;
+}
+
+img {
+    height: 200px;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>Which car are you?</h1>
+        </div>
+        <div class="questions">
+            <h4>on a scale from 1-10 do you prefer comfort or no comfort? </h4>
+            <input class="q1"><br><br>
+
+            <br><br>
+            <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/question-mark_ver_1.jpg" alt="question mark">
+            <h4>fast, nonfast, or not fast, or fast but not fast</h4>
+            <input class="q2">
+            <button>enter</button><br><br>
+            <img src="https://png.pngtree.com/element_our/png/20181205/question-mark-vector-icon-png_256683.jpg" alt="another question mark">
+        </div>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+var result = document.querySelector(".result");
+console.log("hello world");
+
+button.onclick = function () {
+  var q1 = Number(document.querySelector(".q1").value);
+  var q2 = document.querySelector(".q2").value;
+
+  if (q1 < 5 && q2 === "nonfast") {
+    result.innerHTML = " you chose " + q1 + " and " + q2 + " so you are the " + "Audi R8";
+  } else if (q1 > 5 && q2 === "fast") {
+    result.innerHTML = " you chose " + q1 + " and " + q2 + " so you are the " + " superstock hellcat ";
+  } else if (q1 < 5 && q2 === "not fast") {
+    result.innerHTML = " you chose " + q1 + " and " + q2 + " so you are the " + " alfa romeo 4c spider ";
+  } else if (q1 > 5 && q2 === "fast but not fast") {
+    result.innerHTML = " you chose " + q1 + " and " + q2 + " so you are the " + " Chevrolet camaro 2SS crush ";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInJlc3VsdCIsImNvbnNvbGUiLCJsb2ciLCJvbmNsaWNrIiwicTEiLCJOdW1iZXIiLCJ2YWx1ZSIsInEyIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFiO0FBQ0EsSUFBSUMsTUFBTSxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBYjtBQUNDRSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxhQUFaOztBQUNETCxNQUFNLENBQUNNLE9BQVAsR0FBaUIsWUFBVztBQUN4QixNQUFJQyxFQUFFLEdBQUdDLE1BQU0sQ0FBQ1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLEVBQThCTyxLQUEvQixDQUFmO0FBQ0EsTUFBSUMsRUFBRSxHQUFHVCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsS0FBdkIsRUFBOEJPLEtBQXZDOztBQUVBLE1BQUlGLEVBQUUsR0FBRyxDQUFMLElBQVVHLEVBQUUsS0FBSyxTQUFyQixFQUFnQztBQUM1QlAsSUFBQUEsTUFBTSxDQUFDUSxTQUFQLEdBQW1CLGdCQUFnQkosRUFBaEIsR0FBcUIsT0FBckIsR0FBK0JHLEVBQS9CLEdBQW9DLGtCQUFwQyxHQUF5RCxTQUE1RTtBQUVILEdBSEQsTUFHTyxJQUFJSCxFQUFFLEdBQUcsQ0FBTCxJQUFVRyxFQUFFLEtBQUssTUFBckIsRUFBNkI7QUFDaENQLElBQUFBLE1BQU0sQ0FBQ1EsU0FBUCxHQUFtQixnQkFBZ0JKLEVBQWhCLEdBQXFCLE9BQXJCLEdBQStCRyxFQUEvQixHQUFvQyxrQkFBcEMsR0FBeUQsc0JBQTVFO0FBQ0gsR0FGTSxNQUVBLElBQUlILEVBQUUsR0FBRyxDQUFMLElBQVVHLEVBQUUsS0FBSyxVQUFyQixFQUFpQztBQUNwQ1AsSUFBQUEsTUFBTSxDQUFDUSxTQUFQLEdBQW1CLGdCQUFnQkosRUFBaEIsR0FBcUIsT0FBckIsR0FBK0JHLEVBQS9CLEdBQW9DLGtCQUFwQyxHQUF5RCx3QkFBNUU7QUFDSCxHQUZNLE1BRUEsSUFBSUgsRUFBRSxHQUFHLENBQUwsSUFBVUcsRUFBRSxLQUFLLG1CQUFyQixFQUEwQztBQUM3Q1AsSUFBQUEsTUFBTSxDQUFDUSxTQUFQLEdBQW1CLGdCQUFnQkosRUFBaEIsR0FBcUIsT0FBckIsR0FBK0JHLEVBQS9CLEdBQW9DLGtCQUFwQyxHQUF5RCw4QkFBNUU7QUFDSDtBQUNKLENBZEQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbmxldCByZXN1bHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcbiBjb25zb2xlLmxvZyhcImhlbGxvIHdvcmxkXCIpO1xuYnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiAgICBsZXQgcTEgPSBOdW1iZXIoZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5xMVwiKS52YWx1ZSk7XG4gICAgbGV0IHEyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5xMlwiKS52YWx1ZTtcblxuICAgIGlmIChxMSA8IDUgJiYgcTIgPT09IFwibm9uZmFzdFwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIiB5b3UgY2hvc2UgXCIgKyBxMSArIFwiIGFuZCBcIiArIHEyICsgXCIgc28geW91IGFyZSB0aGUgXCIgKyBcIkF1ZGkgUjhcIjtcblxuICAgIH0gZWxzZSBpZiAocTEgPiA1ICYmIHEyID09PSBcImZhc3RcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gXCIgeW91IGNob3NlIFwiICsgcTEgKyBcIiBhbmQgXCIgKyBxMiArIFwiIHNvIHlvdSBhcmUgdGhlIFwiICsgXCIgc3VwZXJzdG9jayBoZWxsY2F0IFwiO1xuICAgIH0gZWxzZSBpZiAocTEgPCA1ICYmIHEyID09PSBcIm5vdCBmYXN0XCIpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IFwiIHlvdSBjaG9zZSBcIiArIHExICsgXCIgYW5kIFwiICsgcTIgKyBcIiBzbyB5b3UgYXJlIHRoZSBcIiArIFwiIGFsZmEgcm9tZW8gNGMgc3BpZGVyIFwiO1xuICAgIH0gZWxzZSBpZiAocTEgPiA1ICYmIHEyID09PSBcImZhc3QgYnV0IG5vdCBmYXN0XCIpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IFwiIHlvdSBjaG9zZSBcIiArIHExICsgXCIgYW5kIFwiICsgcTIgKyBcIiBzbyB5b3UgYXJlIHRoZSBcIiArIFwiIENoZXZyb2xldCBjYW1hcm8gMlNTIGNydXNoIFwiO1xuICAgIH1cbn07Il19</script></body></html>
